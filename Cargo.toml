@@ -3,19 +3,26 @@ name = "catbox-scraper"
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.93"
-description = "catbox.moe file scraper, rewritten properly"
+description = "brute-force file scraper for catbox.moe"
+repository = "https://github.com/sigkillme0/catbox-scraper"
 readme = "README.md"
-license = "WTFPL"
+license-file = "LICENSE"
 publish = false
-default-run = "catbox-scraper"
+exclude = ["/data", "config.toml"]
 
 [dependencies]
 rand = "0.9"
 reqwest = "0.13"
 serde = { version = "1", features = ["derive"] }
 toml = "0.9"
-tokio = { version = "1", features = ["full"] }
-
+tokio = { version = "1", features = [
+  "rt-multi-thread",
+  "macros",
+  "fs",
+  "io-util",
+  "time",
+  "signal",
+] }
 
 [profile.release]
 lto = true
