@@ -2,7 +2,7 @@
 name = "catbox-scraper"
 version = "0.1.0"
 edition = "2024"
-rust-version = "1.85"
+rust-version = "1.93"
 description = "catbox.moe file scraper, rewritten properly"
 readme = "README.md"
 license = "WTFPL"
@@ -11,9 +11,9 @@ default-run = "catbox-scraper"
 
 [dependencies]
 rand = "0.9"
-reqwest = "0.12"
+reqwest = "0.13"
 serde = { version = "1", features = ["derive"] }
-toml = "0.8"
+toml = "0.9"
 tokio = { version = "1", features = ["full"] }
 
 
