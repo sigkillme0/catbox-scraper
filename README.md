@@ -21,7 +21,7 @@ with proxy it expects `PROXY_HOST`, `PROXY_PORT`, `PROXY_USER`, `PROXY_PASS` in 
 ```toml
 threads = 1500
 update_rate = 0.25
-file_extensions = [".png", ".gif", ".jpg", ".jpeg", ".webm", ".mp4"]
+file_extensions = ["png", "gif", "jpg", "jpeg", "webm", "mp4"]
 ```
 
 ## how it works

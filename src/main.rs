@@ -41,7 +41,7 @@ fn random_filename(ext: &str) -> String {
     let name: String = (0..FILENAME_LEN)
         .map(|_| CHARSET[rng.random_range(0..CHARSET.len())] as char)
         .collect();
-    format!("{name}{ext}")
+    format!("{name}.{ext}")
 }
 
 fn format_elapsed(secs: u64) -> String {
@@ -54,7 +54,7 @@ fn format_elapsed(secs: u64) -> String {
 }
 
 fn dir_for_ext(ext: &str) -> std::path::PathBuf {
-    Path::new(DATA_DIR).join(ext.trim_start_matches('.'))
+    Path::new(DATA_DIR).join(ext)
 }
 
 async fn load_config(path: &str) -> Config {
